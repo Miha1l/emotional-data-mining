@@ -8,5 +8,6 @@ def create_balanced_df(dataset_path, n_samples, save_path):
 
 
 if __name__ == '__main__':
-    n_samples = 125
-    create_balanced_df('../data/crowd_train.csv', n_samples, f'../data/crowd_train_{n_samples}.csv')
+    n_samples = 500
+    dataset_name = 'crowd_train'
+    create_balanced_df(f'../data/{dataset_name}.csv', n_samples, f'../data/{dataset_name}_{n_samples}.csv')
