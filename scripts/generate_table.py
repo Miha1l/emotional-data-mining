@@ -30,7 +30,8 @@ def generate_table(label):
                 "audio_path": f"dusha/crowd/crowd_{label}/" + data["audio_path"],
                 "features_path": "dusha/features/" + f"{id}.npy",
                 "emotion": data["speaker_emo"],
-                "label": emo_2_label(data["speaker_emo"])
+                "label": emo_2_label(data["speaker_emo"]),
+                "duration": data["duration"]
             }
 
             l.append(row)
@@ -44,4 +45,4 @@ TRAIN = "train"
 TEST = "test"
 
 if __name__ == "__main__":
-    generate_table(TEST)
+    generate_table(TRAIN)
